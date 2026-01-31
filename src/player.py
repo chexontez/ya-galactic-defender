@@ -79,25 +79,17 @@ class Player(arcade.Sprite):
 
     def draw(self):
         """Отрисовка игрока с дополнительными эффектами"""
-        # Отрисовка базового спрайта
-        super().draw()
+        # Всегда рисуем треугольник (без вызова super().draw())
+        self.draw_triangle()
 
-        # Если нет текстуры, рисуем треугольник
-        if self.texture.size == (1, 1):  # Проверка на пустую текстуру
-            self.draw_triangle()
-
-        # Эффект мигания при получении урона
+        # Остальные эффекты как есть...
         if self.hit_flash_timer > 0:
             self.draw_hit_effect()
 
-        # Индикатор перегрева
         if self.heat > 0:
             self.draw_heat_indicator()
 
-        # Индикатор супер-выстрела
         self.draw_super_shot_indicator()
-
-        # Индикатор здоровья
         self.draw_health_bar()
 
         for bullet in self.bullets:
@@ -206,11 +198,7 @@ class Player(arcade.Sprite):
         y = self.center_y + 45
 
         # Фон
-        arcade.draw_rectangle_filled(
-            x + bar_width // 2, y,
-            bar_width, bar_height,
-            (50, 50, 50)
-        )
+
 
         # Здоровье
         health_width = bar_width * (self.hp / self.max_hp)
@@ -220,11 +208,7 @@ class Player(arcade.Sprite):
             50
         )
 
-        arcade.draw_rectangle_filled(
-            x + health_width // 2, y,
-            health_width, bar_height,
-            health_color
-        )
+
 
         # Текст здоровья
         arcade.draw_text(

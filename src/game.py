@@ -303,13 +303,13 @@ class GameWindow(arcade.Window):
     def draw_background(self):
         """Рисует звездный фон"""
         # Здесь можно добавить звезды, но пока просто градиент
-        arcade.draw_lrtb_rectangle_filled(
-            0, SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_HEIGHT * 0.7,
+        arcade.draw_lrbt_rectangle_filled(
+            0, SCREEN_WIDTH, SCREEN_HEIGHT * 0.7, SCREEN_HEIGHT,
             (10, 10, 40)  # Темно-синий сверху
         )
-        arcade.draw_lrtb_rectangle_filled(
-            0, SCREEN_WIDTH, SCREEN_HEIGHT * 0.7, 0,
-            (20, 20, 50)  # Более светлый снизу
+        arcade.draw_lrbt_rectangle_filled(
+            0, SCREEN_WIDTH, SCREEN_HEIGHT * 0.7, SCREEN_HEIGHT,
+            (20, 20, 50)
         )
 
     def draw_game_ui(self):

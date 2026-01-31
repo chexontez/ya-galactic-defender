@@ -54,6 +54,8 @@ PLAYER_HP = CONFIG.get("player_hp", 5)
 ENEMY_HP = CONFIG.get("enemy_hp", 1)
 ENEMY_SPAWN_RATE = CONFIG.get("enemy_spawn_rate", 1.0)
 ASTEROID_SPAWN_RATE = CONFIG.get("asteroid_spawn_rate", 0.3)
+ENEMY_SPAWN_RATE = 1.0  # врагов в секунду
+ASTEROID_SPAWN_RATE = 0.5  # астероидов в секунду
 
 # Цвета (не настраиваются через конфиг)
 WHITE = (255, 255, 255)
