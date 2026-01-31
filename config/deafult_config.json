@@ -1,0 +1,15 @@
+{
+  "screen_width": 800,
+  "screen_height": 600,
+  "player_speed": 5,
+  "enemy_speed": 2,
+  "laser_speed": 7,
+  "player_lives": 3,
+  "difficulty": "medium",
+  "music_volume": 70,
+  "sound_volume": 80,
+  "player_hp": 5,
+  "enemy_hp": 1,
+  "enemy_spawn_rate": 1.0,
+  "asteroid_spawn_rate": 0.3
+}

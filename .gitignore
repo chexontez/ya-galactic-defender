@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Qt
+*.ui~
+*.pyc
+
+# Конфиги (можно оставить примеры)
+config/current_config.json
+
+# Ресурсы (если они генерируются)
+assets/generated/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Системные
+.DS_Store
+Thumbs.db
